@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/movieTitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter movie title"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieTitleEditText"
+            android:layout_marginTop="17dp"
+            android:backgroundTint="@color/grey"
+            android:text="Search"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/moviesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchButton"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" />
+
+        <!-- Text above the posters carousel -->
+        <TextView
+            android:id="@+id/sagaTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moviesLayout"
+            android:layout_marginTop="16dp"
+            android:text="Best Saga: Fast and Furious"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- HorizontalScrollView for the first carousel -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sagaTitleTextView"
+            android:layout_marginTop="16dp"
+            android:importantForAccessibility="noHideDescendants">
+
+            <LinearLayout
+                android:id="@+id/postersContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moviesLayout"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal" />
+
+
+        </HorizontalScrollView>
+
+        <!-- Text above the second carousel -->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="112dp"
+            android:layout_height="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="430dp"
+            android:layout_marginEnd="181dp"
+            android:text="TextView" />
+        <!-- HorizontalScrollView for the second carousel -->
+
+        <TextView
+            android:id="@+id/wtwTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:layout_marginTop="16dp"
+            android:text="What to watch today:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wtwTitleTextView"
+            android:layout_marginTop="16dp"
+            android:importantForAccessibility="noHideDescendants">
+
+            <LinearLayout
+                android:id="@+id/postersContainer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wtwTitleTextView"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/socialMediaTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wtwTitleTextView"
+            android:layout_marginTop="260dp"
+            android:text="Follow IMDb on social:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Linear layout to hold social media buttons -->
+        <LinearLayout
+            android:id="@+id/socialMediaButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/socialMediaTitleTextView"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- Button for Facebook -->
+            <Button
+                android:id="@+id/facebookButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey"
+                android:text="Facebook"
+                android:textColor="@color/white" />
+
+            <!-- Button for Twitter -->
+            <Button
+                android:id="@+id/twitterButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey"
+                android:text="Twitter"
+                android:textColor="@color/white" />
+
+            <!-- Button for Instagram -->
+            <Button
+                android:id="@+id/instagramButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey"
+                android:text="Instagram"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
